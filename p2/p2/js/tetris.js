@@ -1,4 +1,4 @@
-var IMG_SRC  = 'media/tetris_block.jpg';
+var IMG_SRC  = 'media/tetristest.jpg';
 var OVERLAY  = 255;   // 0 = foreground, 255 = background
 
 var tetrisImage;
@@ -46,12 +46,12 @@ function renderShadow() {
         // canvases match. Otherwise, here be dragons!
         for(var i = 0; i < shadow.data.length; i=i+4) {
 		total_pixels++;
-		if(pixels.data[i] < 245 ||  pixels.data[i+1] < 245 || pixels.data[i+2] < 245) {
-		if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
+		if(pixels.data[i] > 245 &&  pixels.data[i+1] < 10  && pixels.data[i+2] < 10) {
+		if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
 			matching_pixels++;
 		}
 	    } else {
-		if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
+		if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
 			matching_pixels++;
 		} 
 		}
