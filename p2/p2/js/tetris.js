@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 var total_pixels = 0;
 var matching_pixels = 0;
-var pass_percentage = 0.93;
+var pass_percentage = 0.95;
 
 /*
  * In this example, we show you how to overlay the shadow information over
@@ -45,7 +45,6 @@ function renderShadow() {
         // canvases match. Otherwise, here be dragons!
         for(var i = 0; i < shadow.data.length; i=i+4) {
 		total_pixels++;
-            	console.log("r:" + pixels.data[i] + " g:" + pixels.data[i+1] + " b:" + pixels.data[i+2]);
 		if(pixels.data[i] < 245 && pixels.data[i+1] < 245 && pixels.data[i+2] < 245) {
 		if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
 			matching_pixels++;
