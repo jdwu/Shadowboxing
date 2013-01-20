@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 var total_pixels = 0;
 var matching_pixels = 0;
-var pass_percentage = 0.95;
+var pass_percentage = 0.85;
 
 /*
  * In this example, we show you how to overlay the shadow information over
@@ -31,7 +31,8 @@ function renderShadow() {
     // Background pixels are white ([255 255 255 0]) and foreground
     // shadow pixels are black ([0 0 0 0]).
     shadow = getShadowData();
-
+	matching_pixels = 0;
+	total_pixels = 0;
     // Drawing from our image onto the canvas
     if (imageReady) {
         // draw the image over the entire canvas
@@ -44,16 +45,16 @@ function renderShadow() {
         // IMPORTANT: make sure that the width and height of your two
         // canvases match. Otherwise, here be dragons!
         for(var i = 0; i < shadow.data.length; i=i+4) {
-    		total_pixels++;
-    		if(pixels.data[i] < 245 && pixels.data[i+1] < 245 && pixels.data[i+2] < 245) {
-        		if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
-        			matching_pixels++;
-        		}
-    	    } else {
-        		if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
-        			matching_pixels++;
-        		} 
-    		}
+		total_pixels++;
+		if(pixels.data[i] < 245 ||  pixels.data[i+1] < 245 || pixels.data[i+2] < 245) {
+		if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
+			matching_pixels++;
+		}
+	    } else {
+		if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
+			matching_pixels++;
+		} 
+		}
 	    // i = red; i+1 = green; i+2 = blue; i+3 = alpha
             if(shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
                 // If the current shadow pixel is to be overlayed, copy it over to
