@@ -1,11 +1,13 @@
 var IMG_SRC  = 'media/tetristest.jpg';
 var OVERLAY  = 255;   // 0 = foreground, 255 = background
+var imageArr = new Array ('media/tetristest.jpg', 'media/tetris_block.jpg');
+var index = 0;
 
 var tetrisImage;
 var imageReady = false;
 $(document).ready(function() {
     tetrisImage = new Image();
-    tetrisImage.src = IMG_SRC;
+    tetrisImage.src = imageArr[index];
     tetrisImage.onload = function() {
         imageReady = true;
     }
@@ -13,7 +15,7 @@ $(document).ready(function() {
 
 var total_pixels = 0;
 var matching_pixels = 0;
-var pass_percentage = 0.93;
+var pass_percentage = 0.9;
 
 /*
  * In this example, we show you how to overlay the shadow information over
@@ -50,7 +52,7 @@ function renderShadow() {
                 if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
                     matching_pixels++;
                 } 
-    	    } else if(pixels.data[i] < 10 &&  pixels.data[i+1] < 10 && pixels.data[i+2] > 245) {
+    	    } else {
                 if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
                     matching_pixels++;
                 }
@@ -67,6 +69,11 @@ function renderShadow() {
 	console.log(matching_pixels/total_pixels);
 	if ((matching_pixels/total_pixels) >= pass_percentage){
 		console.log("done. On to next tetris block");
+    		if (index < (imageArr.length - 1)){
+			index++;
+			tetrisImage = new Image();
+    			tetrisImage.src = imageArr[index];
+		}
 	}
         // And now, paint our pixels array back to the canvas.
         shadowContext.putImageData(pixels, 0, 0);
