@@ -35,7 +35,7 @@ function run() {
 
 var IMG_SRC  = 'media/testris2.jpg';
 var OVERLAY  = 255;   // 0 = foreground, 255 = background
-var imageArr = new Array ('media/testris2.jpg', 'media/fingerpuppettest.jpg');
+var imageArr = new Array ('media/testris2.jpg', 'media/fingerpuppettest.jpg', 'media/tetris3.jpg', 'media/tetris4.jpg', 'media/tetris5.jpg', 'media/tetris6.jpg', 'media/tetris7.jpg');
 var index = 0;
 
 var tetrisImage;
@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 var total_pixels = 0;
 var matching_pixels = 0;
-var pass_percentage = 0.93;
+var pass_percentage = 0.90;
 
 /*
  * In this example, we show you how to overlay the shadow information over
