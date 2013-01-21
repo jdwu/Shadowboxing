@@ -48,11 +48,14 @@ function renderShadow() {
         // canvases match. Otherwise, here be dragons!
         for(var i = 0; i < shadow.data.length; i=i+4) {
     		total_pixels++;
+
+            //if image pixel is red, then check if corresponding pixel of shadow is white
     		if(pixels.data[i] > 245 &&  pixels.data[i+1] < 10 && pixels.data[i+2] < 10) {
                 if (shadow.data[i] == OVERLAY && shadow.data[i+1] == OVERLAY && shadow.data[i+2] == OVERLAY) {
                     matching_pixels++;
                 } 
-    	    } else {
+    	    } else {//else check if corresponding pixel of shadow is not white
+
                 if (shadow.data[i] != OVERLAY && shadow.data[i+1] != OVERLAY && shadow.data[i+2] != OVERLAY) {
                     matching_pixels++;
                 }
@@ -66,13 +69,15 @@ function renderShadow() {
                 pixels.data[i+2] = shadow.data[i+2];
             }
         }
-	console.log(matching_pixels/total_pixels);
+    var scoreDisplay = document.getElementById("score-display");
+    var score = Math.round(100*matching_pixels/total_pixels);
+    scoreDisplay.innerHTML = " " + score + "%";
 	if ((matching_pixels/total_pixels) >= pass_percentage){
-		console.log("done. On to next tetris block");
-    		if (index < (imageArr.length - 1)){
+		alert("Congratulations! You passed the level! On to next image...");
+    	if (index < (imageArr.length - 1)){
 			index++;
 			tetrisImage = new Image();
-    			tetrisImage.src = imageArr[index];
+    		tetrisImage.src = imageArr[index];
 		}
 	}
         // And now, paint our pixels array back to the canvas.
