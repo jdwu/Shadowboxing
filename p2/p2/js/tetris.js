@@ -35,7 +35,7 @@ function run() {
 
 var IMG_SRC  = 'media/testris2.jpg';
 var OVERLAY  = 255;   // 0 = foreground, 255 = background
-var imageArr = new Array ('media/tetris10.jpg', 'media/tetris9.jpg', 'media/tetris11.jpg', 'media/tetris5.jpg', 'media/tetris6.jpg', 'media/tetris7.jpg');
+var imageArr = new Array ('media/tetris10.jpg', 'media/tetris17.jpg', 'media/tetris13.jpg', 'media/tetris9.jpg', 'media/tetris14.jpg', 'media/tetris15.jpg', 'media/tetris11.jpg', 'media/tetris5.jpg', 'media/tetris6.jpg', 'media/tetris7.jpg');
 var index = 0;
 
 var tetrisImage;
