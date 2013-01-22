@@ -109,7 +109,6 @@ function renderShadow() {
     scoreDisplay.innerHTML = " " + score + "%";
 	if ((matching_pixels/total_pixels) >= pass_percentage){
     	if (index < (imageArr.length - 1)){
-            //$('#basic-modal-content').modal();
              alert("Congratulations! You passed the level! On to next image...");
              alert("Please move yourself out of image before moving to next image.")
 			index++;
