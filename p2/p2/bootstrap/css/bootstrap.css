@@ -227,7 +227,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 a {
@@ -6000,7 +6000,9 @@ a.badge:hover {
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
           border-radius: 6px;
-
+  background-image: url('tetris_background.jpg');
+  background-repeat: no-repeat;
+  background-size:1920px*1080px;
           
 }
 

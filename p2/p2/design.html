@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Design Process</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+    html { 
+        background: url(/css/tetris_background.jpeg) no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    </style>
+    <link href="/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="../assets/ico/favicon.png">
+        <script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
+        <script type='text/javascript' src='js/stackblur.js'></script>   
+        <script type="text/javascript" src="js/kinect.js"></script>
+        <script type="text/javascript" src="js/shadowboxing.js"></script>
+        <script type="text/javascript" src="js/tetris.js"></script>
+
+  </head>
+
+  <body>
+
+
+
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="tetris.html">Shadow Tetris</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="tetris.html">Home</a></li>
+              <li class="active"><a href="#">Design Process</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <!--<div class="hero-unit">-->
+
+        <h1>Design Flow</h1>
+        <dl>
+          <dt><h2>Exploring Public Spaces</h2></dt>
+          <dd>We explored a number of different public spaces including: 
+            <ul>
+              <li>The gym</li>
+              <li>Tresidder/Old Union</li>
+              <li>The Marguerite</li>
+              <li>White Plaza</li>
+              <li>The Circle of Death</li>
+              <li>A fraternity house</li>
+              <li>The exit of a large lecture hall after class (CS 106A!)</li>
+              <li>The Axe and Palm</li>
+              <li>A dorm lounge</li>
+              <li>The Palo Alto Caltrain Station</li>
+            <ul>
+          </dd>
+
+          <dd>We noticed that many of these spaces were waiting areas, or transition areas. Next, we brainstormed some user needs including: 
+            <ul>
+              <li>entertainment</li>
+              <li>want to meet others and interact</li>
+              <li>want to kill time</li>
+              <li>feel awkward approaching others</li>
+              <li>need to stay near location where what they're waiting for arrives</li>
+              <li> low barrier of entry/exit (might need to leave with little warning)</li>
+          </dd>
+
+          <dd>We ultimately decided to focus on Old Union/Tresidder, because we felt that this public space had the most to offer. Compared to the other locations, potential users were more likely to casually loiter in these spaces for a longer period of time, either when waiting for food, friends, etc. In some locations that we originally considered, passerbys would likely be in-transit to their next location (circle of death, White Plaza, lecture hall, etc.), and would thus be unlikely to stop and use our design unless they had no subsequent tasks to complete or places to be. In other locations, such as the gym, passerbys would likely already have an action/goal in mind (to exercise, for example) and would be less likely to stop and interact with a system set up near or in it. </dd>
+
+        </dl>          
+
+        <h2>Brainstorming Designs</h2>
+        <dd><p> During brainstorming, we tried to consider a wide variety of designs. First, we started by verbally throwing out as many different ideas as possible, seeking to explore different types of interaction. Then, we built upon and refined each other's ideas until we felt we had a good number of potential designs to work with. A portion of the initial notes which were transcribed can be found <a href="https://docs.google.com/document/d/1h08eqvguz9oraHPmIvll6aZJcV87fpu6dG04FEr41og/edit">here</a>. After, we approached our initially brainstormed ideas and shaped them into more concrete applications, moulding them through more discussion and sketching out some basic prototypes.<p>
+        
+        <dl>
+          <dt><h3>Shadow Volleyball</h3></dt>
+        </dl>
+        <p>In this design, two or more participants play an interactive game of shadow volleyball. The volleyball spawns above the net, moving towards a random side, when one or more shadows are detected on each side of the screen. The volleyball will drop towards the bottom of the screen at a certain pace, simulating gravitational pull. When the volleyball comes into contact with a shadow, it will change direction and move in the direction the average point in the shadow was moving prior to contact. If the ball hits either the side or bottom of the screen, the opponent of the last team to touch the ball gains a point. The objective of this design is to play a game of shadow volleyball, amassing a greater number of points than your opponent(s).</p>
+        <table class=t"table">
+          <td><img src="media/volleyball2.jpg"> <p class="muted"> The basic flow of the shadow volleyball game </p></td>
+          <td><img src="media/volleyball.jpg"> <p class="muted"> The physical setup of the game</p></td>
+        </table>
+        <p>First, we looked at: INSERT IMAGE HERE</p>
+        <p class="text-info">During the brainstorming process, the idea to use two cameras and capture two people's shadows was thrown out. This lead to the development of an idea where the two users could not see each other, and had to match each other's shadows within a certain percent to get a congratulatory message and unlock an achievement.</p>
+        <b>MOAR DESIGN PROCESSES GO HERE </b>
+        
+</p>
+      <!--</div>-->
+
+      <!-- Example row of columns -->
+<!--       <div class="row">
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="span4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn" href="#">View details &raquo;</a></p>
+        </div>
+      </div> -->
+
+      <hr>
+
+      <footer>
+        <p>&copy; CS 247 Project 2</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
