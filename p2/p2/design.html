@@ -74,75 +74,107 @@
 
       <!-- Main hero unit for a primary marketing message or call to action -->
       <!--<div class="hero-unit">-->
+      
+      <h1>Design Flow</h1>
+      <dl>
+        <dt><h2>Exploring Public Spaces</h2></dt>
+        <dd>We explored a number of different public spaces including: 
+          <ul>
+            <li>The gym</li>
+            <li>Tresidder/Old Union</li>
+            <li>The Marguerite</li>
+            <li>White Plaza</li>
+            <li>The Circle of Death</li>
+            <li>A fraternity house</li>
+            <li>The exit of a large lecture hall after class (CS 106A!)</li>
+            <li>The Axe and Palm</li>
+            <li>A dorm lounge</li>
+            <li>The Palo Alto Caltrain Station</li>
+          <ul>
+        </dd>
 
-        <h1>Design Flow</h1>
-        <dl>
-          <dt><h2>Exploring Public Spaces</h2></dt>
-          <dd>We explored a number of different public spaces including: 
-            <ul>
-              <li>The gym</li>
-              <li>Tresidder/Old Union</li>
-              <li>The Marguerite</li>
-              <li>White Plaza</li>
-              <li>The Circle of Death</li>
-              <li>A fraternity house</li>
-              <li>The exit of a large lecture hall after class (CS 106A!)</li>
-              <li>The Axe and Palm</li>
-              <li>A dorm lounge</li>
-              <li>The Palo Alto Caltrain Station</li>
-            <ul>
-          </dd>
+        <dd>We noticed that many of these spaces were waiting areas, or transition areas. Next, we brainstormed some user needs including: 
+          <ul>
+            <li>entertainment</li>
+            <li>want to meet others and interact</li>
+            <li>want to kill time</li>
+            <li>feel awkward approaching others</li>
+            <li>need to stay near location where what they're waiting for arrives</li>
+            <li> low barrier of entry/exit (might need to leave with little warning)</li>
+        </dd>
 
-          <dd>We noticed that many of these spaces were waiting areas, or transition areas. Next, we brainstormed some user needs including: 
-            <ul>
-              <li>entertainment</li>
-              <li>want to meet others and interact</li>
-              <li>want to kill time</li>
-              <li>feel awkward approaching others</li>
-              <li>need to stay near location where what they're waiting for arrives</li>
-              <li> low barrier of entry/exit (might need to leave with little warning)</li>
-          </dd>
+        <dd>We ultimately decided to focus on Old Union/Tresidder, because we felt that this public space had the most to offer. Compared to the other locations, potential users were more likely to casually loiter in these spaces for a longer period of time, either when waiting for food, friends, etc. In some locations that we originally considered, passerbys would likely be in-transit to their next location (circle of death, White Plaza, lecture hall, etc.), and would thus be unlikely to stop and use our design unless they had no subsequent tasks to complete or places to be. In other locations, such as the gym, passerbys would likely already have an action/goal in mind (to exercise, for example) and would be less likely to stop and interact with a system set up near or in it. </dd>
 
-          <dd>We ultimately decided to focus on Old Union/Tresidder, because we felt that this public space had the most to offer. Compared to the other locations, potential users were more likely to casually loiter in these spaces for a longer period of time, either when waiting for food, friends, etc. In some locations that we originally considered, passerbys would likely be in-transit to their next location (circle of death, White Plaza, lecture hall, etc.), and would thus be unlikely to stop and use our design unless they had no subsequent tasks to complete or places to be. In other locations, such as the gym, passerbys would likely already have an action/goal in mind (to exercise, for example) and would be less likely to stop and interact with a system set up near or in it. </dd>
+      </dl>          
+    
+      <h2>Brainstorming Designs</h2>
+      <dl><dd><p> During brainstorming, we tried to consider a wide variety of designs. First, we started by verbally throwing out as many different ideas as possible, seeking to explore different types of interaction. Then, we built upon and refined each other's ideas until we felt we had a good number of potential designs to work with. A portion of the initial notes which were transcribed can be found <a href="https://docs.google.com/document/d/1h08eqvguz9oraHPmIvll6aZJcV87fpu6dG04FEr41og/edit">here</a>. After, we approached our initially brainstormed ideas and shaped them into more concrete applications, moulding them through more discussion and sketching out some basic prototypes. Not all ideas were expanded on further, because at this point, we started to somewhat consider realistic technical limitations, aiming to look at projects we could actually develop.<p></dd>
+      
+    
+      <dt><h3>Shadow Volleyball</h3></dt>
+     
+      <dd><p>In this design, two or more participants play an interactive game of shadow volleyball. The volleyball spawns above the net, moving towards a random side, when one or more shadows are detected on each side of the screen. The volleyball will drop towards the bottom of the screen at a certain pace, simulating gravitational pull. When the volleyball comes into contact with a shadow, it will change direction and move in the direction the average point in the shadow was moving prior to contact. If the ball hits either the side or bottom of the screen, the opponent of the last team to touch the ball gains a point. The objective of this design is to play a game of shadow volleyball, amassing a greater number of points than your opponent(s).</p></dd>
+      <dd><div class="row">
+          <div class="span4"><img src="media/volleyball2.jpg"> <p class="muted"> The basic flow of the shadow volleyball game </p></div>
+          <div class="span4"><img src="media/volleyball.jpg"> <p class="muted"> The physical setup of the game</p></div>
+      </div></dd>
 
-        </dl>          
+      <dt><h3>Colliding Shapes</h3></dt>
+      <dd><p>In this design, Each separate shadow is randomly assigned a different color shadow on the display. When people's shadows collide, their colors are changed in one of the following ways: 
+        <ul>
+          <li>the color which is created when the two originals are mixed together</li>
+          <li>colors are swapped</li>
+          <li>a random color is picked again for both</li>
+          <li>the smaller shadow takes the color of the larger one</li>
+        </ul>
+      </p>
+      <img src="media/collidingshapes.jpg"> <p class="muted"> The original brainstorming sketch for colliding shapes, depicting the setup and what happens during interactions.</p>
+      <p>This design is visually stimulating, and allows for passive interactions, potentially drawing in curious passerbys for a glimpse. However, it does not necessarily engage users, and may be technically difficult to build. Any sort of movement in the background could potentially cause issues as well.</p>
+      
+      <dt><h3>Whitespace Enclosure</h3></dt>
+      <dd><p> Whenever a shadow encloses a whitespace (nonshadow), the whitespace becomes animated. We explored a number of different animation scenarios including:
+        <ul>
+          <li>becoming a randomly colored bubble which floats towards the top of the screen and pops when it hits a shadow or edge of the screen</li>
+          <li>becoming a bubble which is like a beach volleyball and you can hit up into the air</li>
+          <li>exploding into a number of randomly colored pieces</li>
+        </ul>
+      <img src="media/enclosure.jpg"> <p class=muted> The original brainstorming sketch for whitespace enclosure.</p>
+      </dd>
+      <dt><h3>Shadow Booth</h3></dt>
+      <dd><p>This design would function similarly to a photobooth, but capture shadows instead of images. As envisioned, this design would track important nodes of each person (ex. head, major joints, etc.), and provide the ability to afix certain props to corresponding nodes (such as a hat on the head, a sword in the hand, etc.). </p>
+      <img src="media/photobooth.jpg"> <p class=muted> The original brainstorming sketch for shadow booth</p>
+      <p> Upon further discussion, we figured that this application doesn't really attract that much attention from afar, and would potentially just turn into a novel version of Apple's Photobooth software - not exactly something designed for a public space. It tends to facilitate more of a up close and personal interaction, that might be more reserved for a private space.</p>
+      </dd>
+      <dt><h3>Platformer</h3></dt>
+      <dd><p>This game is a spin on your traditional sidescrolling platformer game. In this game, the objective is to successfully navigate the avatar from one side of the screen to the other. The avatar continuously moves in one direction until it hits the wall. During initial iterations of this design, one would have to successfully navigate the avatar, which started on the top left hand corner of the screen, to the right edge of the screen. The avatar was subjected to gravity, and would move a certain distance left on the screen after a small period of time. During each movement, it would drop onto the next shadow which was below where it moved to, and drop off the screen if no shadow was present. The avatar was not able to jump, and could only move down and left, automatically. </p>
+      <img src="media/platformer.jpg"><p class=muted> The original brainstorming sketch for the platformer</p>
+      <p>Further brainstorming led to the concept of levels, where each stage consisted of a number of obstacles imposed upon the board, which the avatar could not collide with. The avatar could now move back across the screen after hitting an edge, if it is not at the goal (usually located on the lower right hand side). Stage setups could potentially force the user to navigate across the screen multiple times to finish a level, moving the avatar progressively lower as the stage is completed.</p>
+      <p>This game encourages interaction between participants to create the game, as it is easier to maintain shadow shapes with more than one user. One user can't really span his shadow across the entire screen unless he is positioned extremely close to the camera. This game would also be pretty explanatory, and is intuitive to learn. However, without shadows, it would be quite a repetitive experience.</p>
+      </dd>
+    </dl>
 
-        <h2>Brainstorming Designs</h2>
-        <dd><p> During brainstorming, we tried to consider a wide variety of designs. First, we started by verbally throwing out as many different ideas as possible, seeking to explore different types of interaction. Then, we built upon and refined each other's ideas until we felt we had a good number of potential designs to work with. A portion of the initial notes which were transcribed can be found <a href="https://docs.google.com/document/d/1h08eqvguz9oraHPmIvll6aZJcV87fpu6dG04FEr41og/edit">here</a>. After, we approached our initially brainstormed ideas and shaped them into more concrete applications, moulding them through more discussion and sketching out some basic prototypes.<p>
-        
-        <dl>
-          <dt><h3>Shadow Volleyball</h3></dt>
-        </dl>
-        <p>In this design, two or more participants play an interactive game of shadow volleyball. The volleyball spawns above the net, moving towards a random side, when one or more shadows are detected on each side of the screen. The volleyball will drop towards the bottom of the screen at a certain pace, simulating gravitational pull. When the volleyball comes into contact with a shadow, it will change direction and move in the direction the average point in the shadow was moving prior to contact. If the ball hits either the side or bottom of the screen, the opponent of the last team to touch the ball gains a point. The objective of this design is to play a game of shadow volleyball, amassing a greater number of points than your opponent(s).</p>
-        <table class=t"table">
-          <td><img src="media/volleyball2.jpg"> <p class="muted"> The basic flow of the shadow volleyball game </p></td>
-          <td><img src="media/volleyball.jpg"> <p class="muted"> The physical setup of the game</p></td>
-        </table>
-        <p>First, we looked at: INSERT IMAGE HERE</p>
-        <p class="text-info">During the brainstorming process, the idea to use two cameras and capture two people's shadows was thrown out. This lead to the development of an idea where the two users could not see each other, and had to match each other's shadows within a certain percent to get a congratulatory message and unlock an achievement.</p>
-        <b>MOAR DESIGN PROCESSES GO HERE </b>
-        
-</p>
+  <h1>Design Sketches</h1>
+
+   <h2>Shadow Tetris - This Origins of this Project</h2>
+   <dl>
+    <p>During the brainstorming process, the idea to use two cameras and capture two people's shadows was thrown out. This lead to the development of an idea where the two users could not see each other, and had to match each other's shadows within a certain percent to get a congratulatory message and unlock an achievement. However, we had trouble getting past the technical difficulty of running the program with two cameras, so we sought to explore other possible paths. Recalling the Japanese gameshow "Human Tetris", or "Nōkabe" in Japanese, we evolved our original idea into something more technically feasible. We decided to create a shadow-matching application, inspired by Human Tetris, where users would have to position themselves such that they and their shadow fill in the correct shape for the level at hand.</p>
+    <img src="media/shadowtetris.jpg"> <p class=muted>The original brainstorming sketch for shadow tetris. </p>
+    <img src="media/shadowtetris4.jpg"> <p class=muted>A physical mockup of ther interface, depicting what a user should do.</p>
+    <p> At first, we decided to use all tetris shapes, in the spirit of original game, but we soon came to realize that shadows with right angle corners are extremely difficult for humans to emulate. Thus, we ended up using a mix of human hands/human figures in our final target picture selection. Since this project was to be run in Old Union or Tresidder, we tried to find a space which would get a lot of foot traffic, but not be somewhere that people would only go to enroute to somewhere else. After exploring Tresidder, where there were not really any adequete spaces, and people tended to be spread further apart, we visited Old Union. When we got to Old Union, we noticed a mix of people who were lounging around, either on the couches, watching TV or waiting for food, doing homework on the couches or at one of the tables, or walking through the area to visit one of the conference rooms. We also noticed that there often tended to be groups of people who stopped and chatted with friends that they saw who were working in the area. </p>
+    <img src="media/shadowtetris2.jpg"> <p class=muted>The setting for shadow tetris, in the lounge area of Old Union's first floor.</p>
+    <p> Thus, we decided to set up our application at an intersection near a group of couches, that were set up facing a TV. This area was one where students were often found just idling, waiting for friends to show up for meetings, or procrastinating doing that large homework assignment which is due tomorrow. However, it was also on the way to a number of conference rooms, and in the corridor which led from The Axe and Palm into Old Union, which meant that many people would come by. The computer was also set up on the way from most of the conference rooms to the rest room, which meant that passerbys could stop by for a quick breather and distract themselves for a bit. </p>
+    <p>For the actual interface, in our original brainstorming, we just had the target shape imposed on the screen. However, we realized that it was impossible to see where your hand was if all you saw was the target image. Thus, we decided to use the Rose Bowl example, and superimpose the shadow onto the target image, letting our users know what kind of target shape they're trying to create. We decided to hide the target and allow the user to explore the entire screen to figure out what shape they had to do to facilitate collaboration between different users. </p>
+    <img src="media/shadowtetris3.jpg"> <p class=muted>How a user interacts with the interface</p>
+    <p> Another way we explored facilitating interactions was to create targets which required more than one user to complete. This would force participants to grab their friends later in the game, when they reached a level that had two hands on the opposite side of the screen, or two sillhouettes onscreen. We also decided to create a variety of different target images which the participants would cycle through, to increase the amount of different things they become exposed to. We decided that in the aforementioned setting, our typical users would have something to do in the close future, but could spare a quick break. Thus, we decided that our game should engage the user for a short to medium length period of time. Thus, since people get bored when faced with the same things in repetition, we explored the possibility of creating a variety of increasingly more difficult targets which sought to capture the user's attention.  When 90% of the shadow matches the target image, then the next image is displayed. This number was developed through trial and error when testing our project.</p>
+    
+   </dl>
+    
+   <h2>Obstacle Course - An Alternate Idea</h2>
+   <h2>Musical Applications - An Alternate Idea</h2>
+
       <!--</div>-->
 
-      <!-- Example row of columns -->
-<!--       <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-        </div>
-      </div> -->
+     
 
       <hr>
 

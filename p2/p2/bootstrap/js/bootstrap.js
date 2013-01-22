@@ -16,7 +16,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  * ========================================================== */
-
+$('#tab1 li:eq(0) a').tab('show');
+$('#tab2 li:eq(1) a').tab('show');
+$('#tab3 li:eq(3) a').tab('show');
 
 !function ($) {
 
