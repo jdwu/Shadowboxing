@@ -50,7 +50,7 @@ $(document).ready(function() {
 
 var total_pixels = 0;
 var matching_pixels = 0;
-var pass_percentage = 0.93;
+var pass_percentage = 0.90;
 
 /*
  * In this example, we show you how to overlay the shadow information over
@@ -109,11 +109,13 @@ function renderShadow() {
     scoreDisplay.innerHTML = " " + score + "%";
 	if ((matching_pixels/total_pixels) >= pass_percentage){
     	if (index < (imageArr.length - 1)){
-            alert("Congratulations! You passed the level! On to next image...");
-            alert("Please move yourself out of image before moving to next image.")
+            //$('#basic-modal-content').modal();
+             alert("Congratulations! You passed the level! On to next image...");
+             alert("Please move yourself out of image before moving to next image.")
 			index++;
 			tetrisImage = new Image();
     		tetrisImage.src = imageArr[index];
+
 		}else{
             alert("Congratulations, you finished all levels!")
             stopTimer();
